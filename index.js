@@ -5,6 +5,7 @@ const bodyParser = require("body-parser")
 const cors = require('cors')
 // 引入文件
 const carrerRouter = require("./routes/career.router")
+const articleRouter = require("./routes/article.router")
 // 配置
 const app = express()
 const httpsOption = {
@@ -25,6 +26,7 @@ app.listen(port, () => {
 })
 // 历程路由
 app.use("/api-career", carrerRouter)
+app.use("/api-article", articleRouter)
 
 // 博客首页路由
 // app.use("/static", express.static('./build/static'));
